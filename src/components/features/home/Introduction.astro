@@ -1,0 +1,26 @@
+---
+import { url } from "../../../utils/url-utils";
+---
+
+<section class="card-base p-6 md:p-9 mb-4 onload-animation" aria-labelledby="intro-title">
+ <p class="text-sm font-bold text-(--primary) mb-3">ARISU / ADUANGDUC</p>
+ <h1 id="intro-title" class="text-3xl md:text-4xl font-bold text-90 mb-4">Hi, I'm Duc Nguyen.</h1>
+ <p class="text-75 leading-relaxed mb-3">
+  I'm an Information Assurance undergraduate at FPT University, Hanoi campus,
+  and a reverse engineering CTF player with <strong>Loi Yeu Kho Noi</strong>.
+ </p>
+ <p class="text-75 leading-relaxed mb-5">
+  I enjoy taking software apart to understand how it works, especially when it
+  tries to hide what it does. I explore reverse engineering, malware analysis,
+  obfuscation, and how LLMs, machine learning, and deep learning can help with analysis.
+ </p>
+ <div class="flex flex-wrap gap-2 mb-6" aria-label="Interests">
+  {["Reverse engineering", "Malware analysis", "Obfuscation", "AI for reversing"].map((interest) => (
+   <span class="text-sm px-3 py-1 rounded-lg bg-(--btn-regular-bg) text-(--primary)">{interest}</span>
+  ))}
+ </div>
+ <div class="flex flex-wrap gap-3">
+  <a href={url("/about/")} class="btn-regular px-5 py-2.5 rounded-lg font-bold">More about me</a>
+  <a href={url("/about/#contact")} class="btn-regular px-5 py-2.5 rounded-lg font-bold">Get in touch</a>
+ </div>
+</section>

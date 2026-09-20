@@ -300,10 +300,14 @@ describe("Markdown AST enhancements", () => {
 				},
 			],
 		};
-		await remarkWikiLink()(tree, {
+		await remarkWikiLink({
+			postsDirectory: fileURLToPath(
+				new URL("./fixtures/posts/", import.meta.url),
+			),
+		})(tree, {
 			path: fileURLToPath(
 				new URL(
-					"../src/content/posts/content-pipeline-fixture.mdx",
+					"./fixtures/posts/content-pipeline-fixture.mdx",
 					import.meta.url,
 				),
 			),

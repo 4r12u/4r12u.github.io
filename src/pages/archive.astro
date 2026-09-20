@@ -1,8 +1,7 @@
 ---
 import ArchivePanel from "@components/features/archive/ArchivePanel.svelte";
 import CategoryBar from "@components/features/posts/CategoryBar.astro";
-import I18nKey from "@i18n/i18nKey";
-import { i18n } from "@i18n/translation";
+import EmptyPosts from "@components/features/posts/EmptyPosts.astro";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPostsList } from "@utils/content-utils";
 
@@ -40,18 +39,20 @@ const categories = [
 ];
 ---
 
-<MainGridLayout title={i18n(I18nKey.archive)}>
-	{showCategoryBar && <CategoryBar />}
+<MainGridLayout title="Blog" description="CTF write-ups, reverse engineering notes, and explorations in AI-assisted analysis by Duc Nguyen.">
+	<h1 class="text-3xl font-bold text-90 mb-4 px-2">Blog</h1>
+	{posts.length === 0 && <EmptyPosts />}
+	{posts.length > 0 && showCategoryBar && <CategoryBar />}
 	<!-- 引入右侧边栏布局管理器 -->
 	<script>
 		import("../scripts/right-sidebar-layout.js");
 	</script>
 
 	<!-- 修复：补全缺失的 tags 和 categories 属性 -->
-	<ArchivePanel
+	{posts.length > 0 && <ArchivePanel
 		sortedPosts={posts}
 		tags={tags}
 		categories={categories}
 		client:only="svelte"
-	/>
+	/>}
 </MainGridLayout>

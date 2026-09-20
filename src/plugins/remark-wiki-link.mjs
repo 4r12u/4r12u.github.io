@@ -23,7 +23,7 @@ const SKIPPED_NODE_TYPES = new Set([
 	"mdxJsxFlowElement",
 	"mdxJsxTextElement",
 ]);
-let metaCache = { expiresAt: 0, metas: [] };
+let metaCache = { directory: POSTS_DIR, expiresAt: 0, metas: [] };
 
 function normalizeContentPath(value) {
 	const normalized = value
@@ -44,18 +44,19 @@ function normalizeContentPath(value) {
 		: segments.join("/");
 }
 
-function toContentPath(filePath) {
+function toContentPath(filePath, postsDirectory) {
 	return path
-		.relative(POSTS_DIR, filePath)
+		.relative(postsDirectory, filePath)
 		.replaceAll("\\", "/")
 		.replace(MARKDOWN_EXTENSION, "");
 }
 
-function collectPostMetas() {
+function collectPostMetas(postsDirectory = POSTS_DIR) {
 	const now = Date.now();
-	if (now < metaCache.expiresAt) return metaCache.metas;
+	if (metaCache.directory === postsDirectory && now < metaCache.expiresAt)
+		return metaCache.metas;
 	const metas = [];
-	const stack = [POSTS_DIR];
+	const stack = [postsDirectory];
 	while (stack.length > 0) {
 		const directory = stack.pop();
 		let entries = [];
@@ -73,7 +74,7 @@ function collectPostMetas() {
 					if (!statSync(filePath).isFile()) continue;
 					metas.push({
 						filePath,
-						contentPath: toContentPath(filePath),
+						contentPath: toContentPath(filePath, postsDirectory),
 						data: matter(readFileSync(filePath, "utf8")).data ?? {},
 					});
 				} catch {
@@ -82,7 +83,7 @@ function collectPostMetas() {
 			}
 		}
 	}
-	metaCache = { expiresAt: now + 1000, metas };
+	metaCache = { directory: postsDirectory, expiresAt: now + 1000, metas };
 	return metas;
 }
 
@@ -393,6 +394,11 @@ export function remarkWikiLink(options = {}) {
 	return async (tree, file) => {
 		if (options.enable === false) return;
 		const currentFilePath = file?.path || file?.history?.at(-1);
-		await transform(tree, collectPostMetas(), options, currentFilePath);
+		await transform(
+			tree,
+			collectPostMetas(options.postsDirectory),
+			options,
+			currentFilePath,
+		);
 	};
 }

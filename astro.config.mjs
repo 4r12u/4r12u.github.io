@@ -205,7 +205,16 @@ export default defineConfig({
 		svelte({
 			preprocess: vitePreprocess(),
 		}),
-		sitemap(),
+		sitemap({
+			filter: (page) => {
+				const route = new URL(page).pathname.split("/")[1];
+				const feature = route === "ai-tools" ? "aiTools" : route;
+				return (
+					!(feature in siteConfig.featurePages) ||
+					siteConfig.featurePages[feature]
+				);
+			},
+		}),
 		mdx(),
 	],
 	markdown: {
