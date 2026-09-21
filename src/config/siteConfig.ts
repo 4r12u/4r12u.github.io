@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
 	featurePages: {
 		anime: true, // Watch and Read page
 		diary: true, // Personal diary page
-		friends: false, // 友链页面开关
+		friends: true, // Giữ trang Friends hoạt động; không hiển thị trong menu Links đã bỏ
 		projects: true, // 保留模板项目页面
 		skills: true, // 保留模板技能页面
 		timeline: true, // 保留模板时间线页面
