@@ -5,7 +5,7 @@ import { initPostIdMap } from "@utils/permalink-utils";
 import { comparePublishedDatesDescending } from "@utils/post-date-utils";
 import { getCategoryUrl, getPostUrl } from "@utils/url-utils";
 
-import { blogTags } from "../config/blogConfig";
+import { blogTags } from "@/config/blogConfig";
 
 // // Retrieve posts and sort them by publication date
 async function getRawSortedPosts() {
