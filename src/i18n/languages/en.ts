@@ -57,38 +57,39 @@ export const en: Translation = {
 	[Key.author]: "Author",
 	[Key.publishedAt]: "Published at",
 	[Key.license]: "License",
-	[Key.anime]: "Anime",
+	[Key.anime]: "Watch & Read",
 	[Key.diary]: "Diary",
 
-	// Anime Page
-	[Key.animeTitle]: "My Anime List",
-	[Key.animeSubtitle]: "Record my anime journey",
-	[Key.animeStatusWatching]: "Watching",
+	// Watch & Read Page
+	[Key.animeTitle]: "What I Watch & Read",
+	[Key.animeSubtitle]: "Anime, manga, and light novel websites I return to",
+	[Key.animeStatusWatching]: "Active",
 	[Key.animeStatusCompleted]: "Completed",
-	[Key.animeStatusPlanned]: "Planned",
+	[Key.animeStatusPlanned]: "Saved",
 	[Key.animeStatusOnHold]: "On Hold",
 	[Key.animeStatusDropped]: "Dropped",
 	[Key.animeFilterAll]: "All",
-	[Key.animeYear]: "Year",
-	[Key.animeStudio]: "Studio",
-	[Key.animeEmpty]: "No anime data available",
+	[Key.animeYear]: "Type",
+	[Key.animeStudio]: "Platform",
+	[Key.animeEmpty]: "No watch or reading entries yet",
 	[Key.animeEmptyBangumi]:
 		"Please check Bangumi configuration or network connection",
 	[Key.animeEmptyBilibili]:
 		"Please check Bilibili configuration or network connection",
 	[Key.animeEmptyLocal]:
-		"Please add anime information in src/data/anime.ts file",
+		"Please add websites and services in src/data/anime.ts",
 	[Key.animeConfigBilibili]:
 		"Please set your Bilibili vmid in the src/config/siteConfig.ts file",
 	[Key.animeConfigBangumi]:
 		"Please set your Bangumi userId in the src/config/siteConfig.ts file",
 
 	// Diary Page
-	[Key.diarySubtitle]: "Share life, anytime, anywhere",
-	[Key.diaryNoResults]: "No matching moments",
+	[Key.diarySubtitle]: "Personal notes, memories, and everyday life",
+	[Key.diaryNoResults]: "No diary entries yet",
 	[Key.diaryCount]: "entries",
 
-	[Key.diaryTips]: "Only show the latest 30 diary entries",
+	[Key.diaryTips]:
+		"Use this space for study notes, research moments, travel, and everyday life",
 	[Key.diaryMinutesAgo]: "minutes ago",
 	[Key.diaryHoursAgo]: "hours ago",
 	[Key.diaryDaysAgo]: "days ago",
@@ -126,10 +127,10 @@ export const en: Translation = {
 
 	// Albums Page
 	[Key.albums]: "Albums",
-	[Key.albumsSubtitle]: "Record beautiful moments in life",
-	[Key.albumsEmpty]: "No content",
-	[Key.albumsEmptyDesc]:
-		"No albums have been created yet. Go add some beautiful memories!",
+	[Key.albumsSubtitle]:
+		"A visual journal of places, memories, and everyday life",
+	[Key.albumsEmpty]: "No memories yet",
+	[Key.albumsEmptyDesc]: "Albums will hold photos and stories from my life.",
 	[Key.albumsBackToList]: "Back to Albums",
 
 	// Devices Page

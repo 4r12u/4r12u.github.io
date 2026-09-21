@@ -23,11 +23,11 @@ pnpm dev
 - Navigation: src/config/navBarConfig.ts
 - Avatar: src/assets/images/avatar.webp
 
-Only Home, Blog, About, and GitHub appear in the navigation. The sidebar keeps the profile, announcement, tags, table of contents, site statistics, calendar, categories, and local music player. The Live2D mascot remains enabled. Demo articles have been removed; the homepage and blog show an empty state until the first post is published.
+The navigation keeps Home, Archive, My, About, Others, and GitHub. My contains Watch & Read, Diary, Albums, and My Devices. The Watch & Read page is for anime, manga, and light-novel services; Diary and Albums are reserved for personal memories and everyday life. The remaining template pages stay available through Others. The archive timeline will hold write-ups together with code, research papers, and study materials. The Links demo menu is removed because social links already live in the contact section. The sidebar keeps the profile, announcement, tags, table of contents, site statistics, calendar, categories, and local music player. The Live2D mascot remains enabled.
 
 ## Publish a post
 
-Run `pnpm new-post -- my-first-writeup`, then edit the file under src/content/posts/. Keep unfinished posts marked `draft: true`. Published posts automatically appear on the homepage, blog archive, search, and feeds.
+Run `pnpm new-post -- my-first-writeup`, then edit the file under src/content/posts/. Keep unfinished posts marked `draft: true`. Published posts automatically appear on the homepage, archive timeline, search, and feeds. Related code, research papers, or slides can be stored under `public/resources/<post-slug>/` and linked from the Markdown post.
 
 ## Check and build
 
