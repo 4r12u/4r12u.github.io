@@ -5,6 +5,8 @@ import { initPostIdMap } from "@utils/permalink-utils";
 import { comparePublishedDatesDescending } from "@utils/post-date-utils";
 import { getCategoryUrl, getPostUrl } from "@utils/url-utils";
 
+import { blogTags } from "../config/blogConfig";
+
 // // Retrieve posts and sort them by publication date
 async function getRawSortedPosts() {
 	const allBlogPosts = await getCollection("posts", ({ data }) => {
@@ -90,7 +92,9 @@ export async function getTagList(): Promise<Tag[]> {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 
-	const countMap: Record<string, number> = {};
+	const countMap: Record<string, number> = Object.fromEntries(
+		blogTags.map((tag) => [tag, 0]),
+	);
 	allBlogPosts.forEach((post: { data: { tags: string[] } }) => {
 		post.data.tags.forEach((tag: string) => {
 			if (!countMap[tag]) {

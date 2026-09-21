@@ -51,9 +51,9 @@
  */
 
 export { announcementConfig } from "./announcementConfig";
-
 // ─── 外观与壁纸 ─────────────────────────────────────────────
 export { fullscreenWallpaperConfig } from "./backgroundWallpaper";
+export { blogTags } from "./blogConfig";
 // ─── 互动功能 ───────────────────────────────────────────────
 export { commentConfig } from "./commentConfig";
 export { sakuraConfig } from "./effectsConfig";

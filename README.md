@@ -23,7 +23,7 @@ pnpm dev
 - Navigation: src/config/navBarConfig.ts
 - Avatar: src/assets/images/avatar.webp
 
-Only Home, Blog, About, and GitHub appear in the navigation. Unused feature pages, music, and the Live2D mascot are disabled. Demo articles have been removed; the homepage and blog show an empty state until the first post is published.
+Only Home, Blog, About, and GitHub appear in the navigation. The sidebar keeps the profile, announcement, tags, table of contents, site statistics, calendar, categories, and local music player. The Live2D mascot remains enabled. Demo articles have been removed; the homepage and blog show an empty state until the first post is published.
 
 ## Publish a post
 
