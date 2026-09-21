@@ -85,9 +85,13 @@ const settingsPanelSource = await readFile(
 	),
 	"utf8",
 );
+
 const translationSources = await Promise.all(
 	["en", "zh_CN", "zh_TW", "ja"].map((lang) =>
-		readFile(new URL(`../src/i18n/languages/${lang}.ts`, import.meta.url), "utf8"),
+		readFile(
+			new URL(`../src/i18n/languages/${lang}.ts`, import.meta.url),
+			"utf8",
+		),
 	),
 );
 const packageConfig = JSON.parse(
@@ -139,7 +143,7 @@ describe("Global style loading regressions", () => {
 			"global Expressive Code styles must not be duplicated by encryption",
 		);
 		assert.match(globalStyleCheckSource, /about\/index\.html/);
-		assert.match(globalStyleCheckSource, /\.card-github/);
+		assert.match(globalStyleCheckSource, /requiredMarkup:\s*\[\["custom-md"/);
 		assert.match(globalStyleCheckSource, /\.custom-md \.image-grid/);
 	});
 });

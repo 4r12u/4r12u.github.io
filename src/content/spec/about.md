@@ -1,49 +1,40 @@
+## Hi, I'm Duc
 
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/LyraVoid/Mizuki) theme.
+I'm **Nguyen Minh Duc (Duc Nguyen)**, also known online as **Arisu** or **AduangDuc**. I'm an undergraduate Information Assurance student at **FPT University, Hanoi campus**, and a reverse engineering CTF player with **Loi Yeu Kho Noi**.
 
-::github{repo="LyraVoid/Mizuki"}
+I enjoy taking software apart to understand how it works, especially when it tries to hide what it does. My interests include **reverse engineering, malware analysis, and obfuscation**. I'm also exploring how **large language models, machine learning, and deep learning** can support reverse engineering workflows.
 
-## 🌟 Theme Features
+This is my space for CTF write-ups, research notes, and things I learn along the way.
 
-### 🎨 Design & User Experience
-- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
-- **Fully Responsive** - Optimized for all devices from mobile to desktop
-- **Dark/Light Mode** - Automatic theme switching with smooth transitions
-- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
-- **Smooth Animations** - Fluid page transitions and interactive elements
+## Education
 
-### 🔍 Content & Search
-- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
-- **Enhanced Markdown** - Extended syntax with code highlighting and math support
-- **Interactive Table of Contents** - Auto-scroll navigation for long articles
-- **RSS Feed Generation** - Stay updated with automatic feed generation
-- **Reading Time Estimation** - Know how long articles take to read
-- **Post Categorization** - Organize content with tags and categories
+**FPT University — Hanoi campus**
 
+Undergraduate student in Information Assurance
 
+## What I'm curious about
 
-### 📱 Special Pages
-- **Anime Tracking Page** - Track your anime watching progress with ratings
-- **Friends Links Page** - Showcase friend websites with beautiful cards
-- **Diary/Moments Page** - Share life moments like social media posts
-- **Archive Page** - Organized timeline view of all posts
-- **About Page** - Customizable personal introduction (this page!)
+- **Reverse engineering:** understanding programs from the inside out.
+- **Malware analysis:** investigating how malicious software behaves.
+- **Obfuscation:** understanding how code conceals its intent and how to make sense of it.
+- **AI for reverse engineering:** exploring LLMs, machine learning, and deep learning as tools for analysis.
+- **CTFs:** learning through reverse engineering challenges with Loi Yeu Kho Noi.
 
-### 🛠 Technical Features
-- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
-- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
-- **Image Optimization** - PhotoSwipe gallery with lazy loading
-- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
-- **Performance Optimized** - Fast loading with caching and optimization
-- **Comment System Ready** - Integration support for Twikoo comments
+## Away from the disassembler
 
-### 🎯 Advanced Markdown Features
-- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
-- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
-- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
-- **Syntax Highlighting** - Advanced code highlighting with line numbers
-- **Copy Code Buttons** - Easy code copying functionality
+You'll usually find me watching anime, reading manga or books, playing games, or going down another research rabbit hole. I also take sleep very seriously.
 
----
+## What I'm working toward
 
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+Becoming a security researcher, seeing more of the world, and building the financial freedom to keep doing what I love.
+
+## Contact
+
+Want to talk about reversing, CTFs, or a research idea? Feel free to say hello.
+
+- **Email:** [ducnguyen120906@gmail.com](mailto:ducnguyen120906@gmail.com)
+- **GitHub:** [4r12u](https://github.com/4r12u)
+- **Facebook:** [Duc Nguyen](https://www.facebook.com/ducnguyen111/)
+- **Instagram:** [@claude.opus67](https://www.instagram.com/claude.opus67/)
+- **X / Twitter:** [@AduangDucc](https://x.com/AduangDucc)
+- **Discord:** `ducnguyen129`

@@ -270,7 +270,7 @@ const getActivePadding = (level: number): string => {
 					icon="material-symbols:article-outline"
 					class="text-2xl mb-2"
 				/>
-				<p>暂无文章</p>
+				<p>No posts yet</p>
 			</div>
 		{:else}
 			<div class="post-content">
