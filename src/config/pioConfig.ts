@@ -4,7 +4,9 @@ import type { PioConfig } from "../types/config";
 export const pioConfig: PioConfig = {
 	enable: true, // 启用看板娘
 	models: ["/pio/models/NOIR/noir.model3.json"], // 默认模型路径
-	position: "left", // 模型位置
+	position: "right", // 模型位置：改为 "left" 可 chuyển sang bên trái
+	offsetX: 0, // Khoảng cách từ mép phải/trái (px), có thể điều chỉnh
+	offsetY: 0, // Khoảng cách từ đáy (px), có thể điều chỉnh
 	width: 280, // 默认宽度
 	height: 250, // 默认高度
 	mode: "draggable", // 默认为可拖拽模式

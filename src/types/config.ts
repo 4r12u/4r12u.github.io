@@ -506,6 +506,8 @@ export interface PioConfig {
 	enable: boolean; // 是否启用看板娘
 	models?: string[]; // 模型文件路径数组（支持 .model.json 和 .model3.json）
 	position?: "left" | "right"; // 看板娘位置
+	offsetX?: number; // Khoảng cách ngang tới mép màn hình (px)
+	offsetY?: number; // Khoảng cách dọc tới đáy màn hình (px)
 	width?: number; // 看板娘宽度
 	height?: number; // 看板娘高度
 	mode?: "static" | "fixed" | "draggable"; // 展现模式

@@ -56,14 +56,16 @@ if (Object.keys(tipsData).length > 0) {
 const widgetWidth = config.width ?? 280;
 const hiddenOnMobile = config.hiddenOnMobile ?? true;
 const isRight = config.position === "right";
+const offsetX = config.offsetX ?? 0;
+const offsetY = config.offsetY ?? 0;
 ---
 
 <iframe
 	id="l2d-iframe"
 	src="/pio/live2d-host.html"
 	allowtransparency="true"
-	style={"position: fixed; z-index: 999; pointer-events: none; border: none; bottom: 0;"
-		+ (isRight ? " right: 0;" : " left: 0;")
+	style={"position: fixed; z-index: 999; pointer-events: none; border: none; bottom: " + offsetY + "px;"
+		+ (isRight ? " right: " + offsetX + "px;" : " left: " + offsetX + "px;")
 		+ " width: " + widgetWidth + "px;"
 		+ " height: 600px;"
 		+ " opacity: 0;"}

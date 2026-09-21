@@ -8,16 +8,7 @@ export const navBarConfig: NavBarConfig = {
 			name: "My",
 			url: "/content/",
 			icon: "material-symbols:person",
-			children: [
-				LinkPreset.Anime,
-				LinkPreset.Diary,
-				LinkPreset.Albums,
-				{
-					name: "My Devices",
-					url: "/devices/",
-					icon: "material-symbols:devices",
-				},
-			],
+			children: [LinkPreset.Anime, LinkPreset.Diary, LinkPreset.Albums],
 		},
 		LinkPreset.About,
 		{
