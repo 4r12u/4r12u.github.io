@@ -43,7 +43,10 @@ jobs:
           # ENABLE_CONTENT_SYNC: true
           # CONTENT_REPO_URL: ${{ secrets.CONTENT_REPO_URL }}
           # USE_SUBMODULE: true
-      
+
+      - name: Disable Jekyll processing
+        run: touch dist/.nojekyll
+
       - name: Deploy to pages branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
